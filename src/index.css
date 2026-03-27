@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Plus Jakarta Sans", sans-serif;
+  --font-body: "Inter", sans-serif;
+  
+  --color-primary: #0ea5e9;
+  --color-primary-light: #7dd3fc;
+  --color-primary-container: #e0f2fe;
+  
+  --color-secondary: #0284c7;
+  --color-secondary-container: #f0f9ff;
+  
+  --color-surface: #ffffff;
+  --color-surface-low: #f8fafc;
+  --color-surface-lowest: #ffffff;
+  
+  --radius-md: 1rem;
+  --radius-xl: 2rem;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-slate-900 font-body antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline;
+  }
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.mastery-progress-bar {
+  @apply h-3 w-full bg-primary-container rounded-full overflow-hidden;
+}
+
+.mastery-progress-fill {
+  @apply h-full bg-primary rounded-full transition-all duration-500 ease-out;
+}
